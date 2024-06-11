@@ -1,0 +1,11 @@
+services:
+  app:
+    build:
+      context: .
+    tty: true
+    volumes:
+      - ./:/app
+    environment:
+      - WATCHPACK_POLLING=true
+    ports:
+      - "4000:3000"
